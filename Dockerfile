@@ -4,11 +4,11 @@ FROM node:18
 
 WORKDIR /app
 
-COPY backend/package*.json ./backend/
-COPY backend/. ./backend/
+COPY medusa-app/package*.json ./medusa-app/
+COPY medusa-app/. ./medusa-app/
 
 # Setting working directory
-WORKDIR /app/backend
+WORKDIR /app/medusa-app
 
 RUN npm install
 
