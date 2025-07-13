@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_DB: medusadb
+      POSTGRES_USER: medusa_user
+      POSTGRES_PASSWORD: medusa_pass123
+    ports:
+      - '5432:5432'
+    volumes:
+      - medusa-db-data:/var/lib/postgresql/data
+volumes:
+  medusa-db-data: 
